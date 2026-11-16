@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>memBrain Studios | Game Design & Software Development</title>
+  <meta name="description" content="memBrain Studios is a software development company specializing in Game Design. We create elegant, innovative games and tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a1a;
+      --card: #12122a;
+      --cyan: #00e5ff;
+      --magenta: #ff00aa;
+      --text: #e0e0ff;
+      --muted: #8892b0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, var(--cyan), var(--magenta));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.2rem 5%;
+      background: rgba(10,10,26,0.85);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0,229,255,0.1);
+    }
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--cyan); }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 5% 4rem;
+      background: radial-gradient(circle at 20% 50%, rgba(0,229,255,0.08), transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,0,170,0.08), transparent 50%);
+    }
+    .hero-content { max-width: 700px; }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .hero p { font-size: 1.25rem; color: var(--muted); margin-bottom: 2.5rem; max-width: 550px; }
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      background: linear-gradient(90deg, var(--cyan), var(--magenta));
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,229,255,0.3); }
+    section { padding: 6rem 5%; }
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--card);
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      border: 1px solid rgba(0,229,255,0.15);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .card:hover { transform: translateY(-6px); border-color: var(--cyan); }
+    .card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: var(--cyan); }
+    .about { max-width: 800px; margin: 0 auto; text-align: center; }
+    .about p { font-size: 1.15rem; color: var(--muted); }
+    footer {
+      text-align: center;
+      padding: 3rem 5%;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+    }
+    .contact a { color: var(--cyan); text-decoration: none; }
+    @media (max-width: 700px) {
+      nav { display: none; }
+      .hero { padding-top: 6rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">mem<span class="gradient-text">Brain</span> Studios</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Crafting Worlds<br><span class="gradient-text">Through Design</span></h1>
+      <p>memBrain Studios is a software development company specializing in Game Design. We build elegant, innovative games and the tools that power them.</p>
+      <a href="#services" class="btn">Explore Our Work</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About <span class="gradient-text">memBrain</span></h2>
+    <div class="about">
+      <p>Founded by Mark McKinney, memBrain Studios focuses on creating thoughtful game experiences and robust software. From procedural systems to complete game titles, we blend technical excellence with creative design.</p>
+      <p style="margin-top: 1.5rem;">Based in Sneedville, TN, we collaborate on projects that push the boundaries of interactive entertainment and developer tools.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>What We <span class="gradient-text">Do</span></h2>
+    <div class="services">
+      <div class="card">
+        <h3>Game Design</h3>
+        <p>Core gameplay systems, level design, mechanics, and player experience. From concept to polished interactive experiences.</p>
+      </div>
+      <div class="card">
+        <h3>Software Development</h3>
+        <p>Custom tools, engines, modding frameworks, and backend systems tailored for games and creative software.</p>
+      </div>
+      <div class="card">
+        <h3>Technical Art & Tools</h3>
+        <p>Procedural generation, shaders, asset pipelines, and developer utilities that accelerate production.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get in <span class="gradient-text">Touch</span></h2>
+    <div class="about">
+      <p>Interested in collaborating or have a project in mind?</p>
+      <p style="margin-top: 1.5rem;" class="contact">
+        Email: <a href="mailto:contact@membrainstudios.com">contact@membrainstudios.com</a><br>
+        GitHub: <a href="https://github.com/memBrainStudios" target="_blank">github.com/memBrainStudios</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 memBrain Studios. All rights reserved.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Game Design & Software Development</p>
+  </footer>
+</body>
+</html>
